@@ -1,3 +1,4 @@
-# Java-projects
-My Java projects
-Readme
+
+MOVIES
+
+My first Java project is an application, which can handle (manually inserted) basic informations about movies, especially the cast of feature films. The application is able to export the structured information into XML format. The file 'description_and_schema.jpg' contains the data structure and other details of the task. The file 'movies - given sample xml file.xml' was given as a help to reach the right data structure with exporting, but the other two sample files ('sample_movie.xml' and 'sample_person.xml') is made by myself, with this application.

@@ -5,4 +5,4 @@ My first Java project is an application, which can handle (manually inserted) ba
 
 MOVIES v2
 
-My second Java project is an other version of the previous (Movie) application, which doesn't contain XML handling, but it can desscribe two operations (buying, lending), and uses not only movies: the new product types are the books and the games. This task helps to practicle my fresh knowledges about abstract methods, abstract classes, 'implements' and 'extends' keywords, 'instanceof' operator, overriding methods and casting types. The details of the task is in file 'task-description.png'.
+My second Java project is an other version of the previous (Movie) application, which doesn't contain XML handling, but it can describe two operations (buying, lending), and uses not only movies: the new product types are the books and the games. It handles any data of the customers too. All of the operations become an unique id. This task helps me to practicle my fresh knowledges about abstract methods, abstract classes, 'implements' and 'extends' keywords, 'instanceof' operator, overriding methods and casting types. The details of the task is in file 'task-description.png'.

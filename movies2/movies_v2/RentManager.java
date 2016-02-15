@@ -88,12 +88,13 @@ public class RentManager {
 		System.out.println(spaceOdyssey.getInvestment());
 		
 		Game princeOfPersia = new Game("Prince of Persia", new Person());
+		princeOfPersia.setStaff(new ArrayList<Person>());
+		List<Person> staff1 = princeOfPersia.getStaff();
 		Person customerG1 = new Person();
 		customerG1 = princeOfPersia.getPerson();
 		customerG1.setFirstName("Lukacs");
 		customerG1.setFirstName("Zsori");
 		customerG1.setGender(Gender.MALE);
-		List<Person> staff1 = princeOfPersia.getStaff();
 		Person john = new Person();
 		john.setFirstName("John");
 		john.setLastName("Ubisoft");
@@ -113,6 +114,7 @@ public class RentManager {
 		
 		
 		Game mortalKombat4 = new Game("Mortal Kombat 4", uvegtigris.getPerson());
+		mortalKombat4.setStaff(new ArrayList<Person>());
 		List<Person> staff2 = mortalKombat4.getStaff();
 		Person johnM = new Person();
 		johnM.setFirstName("John");

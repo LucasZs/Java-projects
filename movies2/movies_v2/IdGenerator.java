@@ -18,9 +18,6 @@ class IdGenerator {
 		else if (product instanceof Game) {
 			id = "GAM" + String.valueOf(++numberOfGames);
 		}
-		else {
-			id = "";
-		}
 		return id;
 
 	}

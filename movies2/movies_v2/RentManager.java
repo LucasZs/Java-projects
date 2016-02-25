@@ -13,8 +13,14 @@ public class RentManager {
 		return income;
 	}
 
-	public static void main(String[] args) {
+		public static void main(String[] args) {
+		
+		List<Product> demodata = generateData();
+		printData(demodata);
+	}
 
+	public static List<Product> generateData() {
+		
 		Movie uvegtigris = new Movie("Uvegtigris", new Person());
 		Person customerM1 = uvegtigris.getPerson();
 		customerM1.setFirstName("Adam");
@@ -38,8 +44,6 @@ public class RentManager {
 		uvegtigris.setCast(cast1);
 		uvegtigris.setDuration(104L);
 		uvegtigris.setPrice(55);
-		
-		System.out.println(uvegtigris.getInvestment());
 		
 		Movie valamiAmerika = new Movie("Valami Amerika", new Person());
 		Person customerM2 = valamiAmerika.getPerson();
@@ -65,8 +69,6 @@ public class RentManager {
 		valamiAmerika.setDuration(115L);
 		valamiAmerika.setPrice(55);
 		
-		System.out.println(valamiAmerika.getInvestment());
-		
 		Book azEmberTragediaja = new Book("Az ember tragediaja", uvegtigris.getPerson());
 		Person author1 = new Person();
 		author1.setFirstName("Imre");
@@ -75,8 +77,6 @@ public class RentManager {
 		author1.setSalary(0);
 		azEmberTragediaja.setAuthor(author1);
 		
-		System.out.println(azEmberTragediaja.getInvestment());
-		
 		Book spaceOdyssey = new Book("2001 - A Space Odyssey", uvegtigris.getPerson());
 		Person author2 = new Person();
 		author2.setFirstName("Arthur C.");
@@ -84,8 +84,6 @@ public class RentManager {
 		author2.setGender(Gender.MALE);
 		author2.setSalary(0);
 		spaceOdyssey.setAuthor(author2);
-		
-		System.out.println(spaceOdyssey.getInvestment());
 		
 		Game princeOfPersia = new Game("Prince of Persia", new Person());
 		princeOfPersia.setStaff(new ArrayList<Person>());
@@ -110,9 +108,6 @@ public class RentManager {
 		princeOfPersia.setStaff(staff1);
 		princeOfPersia.setPrice(14); 
 		
-		System.out.println(princeOfPersia.getInvestment());
-		
-		
 		Game mortalKombat4 = new Game("Mortal Kombat 4", uvegtigris.getPerson());
 		mortalKombat4.setStaff(new ArrayList<Person>());
 		List<Person> staff2 = mortalKombat4.getStaff();
@@ -131,7 +126,21 @@ public class RentManager {
 		mortalKombat4.setStaff(staff2);
 		mortalKombat4.setPrice(3); 
 		
-		System.out.println(mortalKombat4.getInvestment());
+		List<Product> data = new ArrayList<>();
+		data.add(uvegtigris);
+		data.add(valamiAmerika);
+		data.add(azEmberTragediaja);
+		data.add(spaceOdyssey);
+		data.add(princeOfPersia);
+		data.add(mortalKombat4);
+		return data;
 	}
 
+	public static void printData(List<Product> data) {
+		
+		for (Product product: data) {
+			System.out.println("ID:\t" + product.id);
+			System.out.println("Investment:\t" + product.getInvestment());
+		}
+	}
 }

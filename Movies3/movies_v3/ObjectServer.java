@@ -35,6 +35,8 @@ class ObjectServer {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		} catch(ClassCastException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -61,7 +63,7 @@ class ObjectServer {
 		mode = ServerMode.SAVE;
 	}
 	
-	private static void recieve() throws ClassNotFoundException, IOException {
+	private static void recieve() throws ClassCastException, ClassNotFoundException, IOException {
 		Object objectReceived;
 		try {
 			objectReceived = objectsFromSocket.readObject();

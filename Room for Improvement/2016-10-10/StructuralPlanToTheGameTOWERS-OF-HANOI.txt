@@ -1,0 +1,37 @@
+GUI (V)
+
+
+Logic (C)
+
+
+Entity (M)
+
+
+
+
+
+
+Class:
+
+	Torony
+
+	List<Tanyer>
+
+	Tanyer
+
+		int meret
+
+
+Logic
+
+	Jatek
+
+		Torony, Torony, Torony
+
+		init
+
+		validate
+
+		move
+
+		isEndGame

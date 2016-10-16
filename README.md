@@ -14,3 +14,7 @@ Serialization and networking of movies v2 application. The details of the task a
 LOGIN
 
 My fourth Java project is a simple login application with a basic GUI. This app using servlets and sessions. The details of the task are in file 'login-task-description.png'.
+
+ROOM FOR IMPROVEMENT
+
+More dojos to be better in coding.

@@ -22,19 +22,22 @@ public class Triangle implements Shape{
 	
 	 public double area() {
 		double halfOfPerimeter = (sideA + sideB + sideC) / 2;
-		return Math.sqrt(halfOfPerimeter * (halfOfPerimeter - sideA) * (halfOfPerimeter - sideB) * (halfOfPerimeter - sideC));
+		double area = Math.sqrt(halfOfPerimeter * (halfOfPerimeter - sideA) * (halfOfPerimeter - sideB) * (halfOfPerimeter - sideC));
+		return Math.floor(1000 * area) / 1000;
 	 }
 	 
 	 public double perimeter() {
-			 return sideA + sideB + sideC;
+			 double perimeter = sideA + sideB + sideC;
+			 return Math.floor(1000 * perimeter) / 1000;
 	 }
 	
 	 public double getRealValue() {
-		if(value * area() - perimeter()<=0){
+		 double realValue = value * area() - perimeter();
+		if(Math.floor(1000 * realValue) / 1000 <=0){
 			return 0;
 		}
 		else{
-			return value * area() - perimeter();
+			return Math.floor(1000 * realValue) / 1000;
 		}
 	 }
 	 

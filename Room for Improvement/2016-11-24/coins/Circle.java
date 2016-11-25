@@ -10,15 +10,18 @@ public class Circle implements Shape {
 	}
 	
 	 public double area() {
-	        return pi * Math.pow(radius, 2);
+	    double area = pi * Math.pow(radius, 2);
+	    return Math.floor(1000 * area) / 1000;
 	 }
 	 
 	 public double perimeter() {
-		 return 2 * pi * radius;
+		 double perimeter = 2 * pi * radius;
+		 return Math.floor(1000 * perimeter) / 1000;
 	 }
 	
 	 public double getRealValue() {
-		 return value * area() - perimeter();
+		double realValue = value * area() - perimeter();
+		return Math.floor(1000 * realValue) / 1000;
 	 }
 	 
 	 @Override

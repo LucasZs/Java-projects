@@ -10,15 +10,18 @@ public class Rectangle implements Shape{
 	}
 	
     public double area() {
-        return sideA * sideB;
+        double area = sideA * sideB;
+        return Math.floor(1000 * area) / 1000;
     }
 
     public double perimeter() {
-        return 2 * (sideA + sideB);
+        double perimeter =  2 * (sideA + sideB);
+        return Math.floor(1000 * perimeter) / 1000;
     }
     
 	 public double getRealValue() {
-		 return value * area() - perimeter();
+		 double realValue = value * area() - perimeter();
+		 return Math.floor(1000 * realValue) / 1000;
 	 }
 	 
 	 @Override

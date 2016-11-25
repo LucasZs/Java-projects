@@ -102,5 +102,9 @@ public class CoinHandler {
 		hashSet.add(rectangle2);
 		System.out.println(sortCoinsByArea((HashSet<Shape>) hashSet).toString());
 		System.out.println(sortCoinsByPerimeter((HashSet<Shape>) hashSet).toString());
+		
+		Triangle invalidTriangle = new Triangle(1, 1, 2); //stop running with IllegalArgumentException
+		hashSet.add(invalidTriangle);
+		System.out.println(hashSet.size());
 	}
 }

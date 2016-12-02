@@ -1,7 +1,7 @@
 package repeating_variation_generic_version_and_reflection;
 
 import java.lang.reflect.Constructor;
-import java.lang.annotation.Annotation;s
+import java.lang.annotation.Annotation;
 import java.util.Arrays;
 import java.util.Iterator;
 

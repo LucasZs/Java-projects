@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		
 		if (username == null || password == null || username.equals("") || password.equals("")) {
 			resp.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE);
-			LOGGER.info("Login failed.");
+			LOGGER.error("Missing username and/or password.");
 		}
 		UserBO userBO = new UserBO();
 		User userResult = userBO.selectUser(username, password);
@@ -47,12 +47,12 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = req.getSession(true);
 			resp.sendRedirect("search.html");
 			session.setAttribute("userName", userResult.getUserName());
-			LOGGER.info("{} is logged in.", session.getAttribute("userName"));
+			LOGGER.info("User '{}' is logged in with password '{}' from IP address {}", session.getAttribute("userName"), req.getParameter("pw"), req.getRemoteAddr());
 			
 		}
 		if (!authenticated) {
 			resp.sendError(HttpServletResponse.SC_FORBIDDEN);
-			LOGGER.info("Login failed.");
+			LOGGER.error("Wrong username and/or password.");
 		}
 
 	}

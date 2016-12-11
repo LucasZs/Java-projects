@@ -24,12 +24,11 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		if (session == null){
 			response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
-			LOGGER.info("Unauthorized access");
+			LOGGER.error("Unauthorized access");
 			return;
 		}
-		System.out.println(session.getId());
 			
-		LOGGER.info("{} is logged out.", session.getAttribute("userName"));
+		LOGGER.info("User '{}' is logged out", session.getAttribute("userName"), session.getAttribute("password"));
 		session.invalidate();
 		response.sendRedirect("index.html");
 		}

@@ -2,8 +2,15 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
  
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
-    <appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
+    <appender name="InfoFileAppender" class="org.apache.log4j.RollingFileAppender">
         <param name="Threshold" value="INFO" />
+        <param name="File" value="c:/Log/myLogFile.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d  %-5p  [%c{1}] %m %n" />
+        </layout>
+    </appender>
+    <appender name="ErrorFileAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="Threshold" value="ERROR" />
         <param name="File" value="c:/Log/myLogFile.log" />
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d  %-5p  [%c{1}] %m %n" />
@@ -11,7 +18,8 @@
     </appender>
  
     <root>
-        <priority value="info" />
-        <appender-ref ref="fileAppender" />
-    </root>
+    <level value="INFO" />
+    <appender-ref ref="InfoFileAppender" />
+    <appender-ref ref="ErrorFileAppender" />
+</root>
 </log4j:configuration>
